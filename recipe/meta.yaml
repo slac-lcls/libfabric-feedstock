@@ -1,5 +1,5 @@
 {% set name = "libfabric" %}
-{% set version = "1.10.1" %}
+{% set version = "1.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: https://github.com/ofiwg/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: 159dc44084afa89278ca2c471120635adb8fbdd4aa3bb61e4249c8e6ba6a83e6 
+    sha256: fb6b9deace1dda86dfa88b2d876516becd6e932e79e384763d634b92fec31082
   - path: ./ib_user_verbs.h
 
 build:
   skip: True  # [win or osx]
-  number: 21
+  number: 0
 
 requirements:
   build:
